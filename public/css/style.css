@@ -1,0 +1,83 @@
+ html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+  }
+
+  main {
+    flex: 1;
+    padding: 2em;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  form {
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+  }
+
+  input[type="text"], select {
+    padding: 0.5em;
+    flex: 1;
+    min-width: 100px;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #218838;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    background: white;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  li form {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 600px) {
+    form, li form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
