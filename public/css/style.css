@@ -80,4 +80,20 @@
       flex-direction: column;
       align-items: stretch;
     }
+
+   body{
+    margin: 0;
+    padding: 0;
+   }
+
+   @media (max-width: 400px) {
+    form, li form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+   body{
+    margin: 0;
+    padding: 0;
+   }
   }
