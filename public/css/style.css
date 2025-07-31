@@ -1,4 +1,4 @@
- html, body {
+  html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -81,8 +81,11 @@
       align-items: stretch;
     }
 
-   body{
-    margin: 0;
-    padding: 0;
-   }
+    main{
+      padding-left: 0;
+    }
+
+    form{
+      margin-left: 2em;
+    }
   }
