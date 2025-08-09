@@ -1,13 +1,21 @@
 {
-  "name": "todo-list",
+  "name": "todo-list-web-application",
   "version": "1.0.0",
-  "description": "Todo list made to complete the tasks",
+  "description": "[Click here to view the deployed app](https://todo-list-web-application-fufp.onrender.com)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roshan0885/Todo-List-web-application.git"
+  },
   "author": "Roshan Khan",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roshan0885/Todo-List-web-application/issues"
+  },
+  "homepage": "https://github.com/Roshan0885/Todo-List-web-application#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
