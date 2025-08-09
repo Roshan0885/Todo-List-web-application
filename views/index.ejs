@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Todo List App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  </head>
-<body>
-
-
-  <header>
-    <h1>Todo List</h1>
-  </header>
-
- 
+<%- include('partials/header') %>
   <main>
+    <% if (typeof message !== 'undefined' && message) { %>
+      <script>alert("<%= message %>");</script>
+    <% } %>
 
-   
     <form id="addForm" action="/add" method="POST">
-      <input type="text" id="taskInput" name="task" placeholder="Enter a new task">
+      <input type="text" id="taskInput" name="task" placeholder="Enter a new task" required>
       <select name="priority">
         <option value="Low">Low</option>
         <option value="Medium" selected>Medium</option>
@@ -27,7 +14,6 @@
       <button type="submit">Add Task</button>
     </form>
 
-   
     <form action="/" method="GET">
       <label for="filter">Filter:</label>
       <select name="filter" onchange="this.form.submit()">
@@ -38,11 +24,10 @@
       </select>
     </form>
 
-   
     <ul>
       <% todos.forEach((todo, index) => { %>
         <li>
-          <form action="/edit/<%= index %>" method="POST">
+          <form action="/edit/<%= index %>?_method=PUT" method="POST">
             <input type="text" name="task" value="<%= todo.task %>">
             <select name="priority">
               <option value="Low" <%= todo.priority === 'Low' ? 'selected' : '' %>>Low</option>
@@ -51,19 +36,13 @@
             </select>
             <button type="submit">Update</button>
           </form>
-          <form action="/delete/<%= index %>" method="POST">
+          <form action="/delete/<%= index %>?_method=DELETE" method="POST">
             <button type="submit" style="background: #dc3545;">Delete</button>
           </form>
         </li>
       <% }); %>
     </ul>
-
   </main>
 
-  <footer>
-    <p>&copy; 2025 Todo App</p>
-  </footer>
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+<%- include('partials/footer') %>

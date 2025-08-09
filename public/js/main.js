@@ -1,4 +1,4 @@
-document.querySelector('form').addEventListener('submit', function (e) {
+document.getElementById('addForm').addEventListener('submit', function (e) {
   const input = document.getElementById('taskInput');
   if (input.value.trim() === '') {
     alert('Task cannot be empty!');
